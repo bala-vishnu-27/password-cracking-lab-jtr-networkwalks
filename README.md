@@ -2,8 +2,8 @@
 
 ## Password Cracking with JTR & NetworkWalks Tools
 
-**Name:** [Your Name]
-**Batch:** [Your Batch]
+**Name:** Bala vishnu
+**Batch:** B084C
 **Program:** Networkwalks Cybersecurity Internship
 **Week:** 03
 **Project:** Password Cracking (PM1 + PM2)
@@ -107,5 +107,5 @@ Both labs showed how password-protected PDFs can be cracked quickly once their h
 
 ## 👤 Author
 
-**[Your Name]**
-Networkwalks Cybersecurity Internship — Batch [Your Batch]
+**Bala vishnu**
+Networkwalks Cybersecurity Internship — Batch B084C
