@@ -1,97 +1,90 @@
-# 🔐 Password Cracking Lab: JTR, Johnny & Networkwalks Tools
+# Networkwalks Cybersecurity Internship – Week 3
 
-![Status](https://img.shields.io/badge/status-completed-brightgreen)
-![Purpose](https://img.shields.io/badge/purpose-educational-blue)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)
+## Password Cracking with JTR & NetworkWalks Tools
 
-Hands-on lab from the **Networkwalks Cybersecurity & Ethical Hacking** course (Week 3). I recovered the password of a protected PDF using two different approaches and captured the lab flag.
-
-> ⚠️ **Disclaimer:** This was done on a lab file provided by the course, in an authorized training environment, for educational purposes only. Do not use these techniques on files or systems you don't own or have permission to test.
+**Name:** Sakina Aftab
+**Batch:** B084
+**Program:** Networkwalks Cybersecurity Internship
+**Week:** 03
+**Project:** Password Cracking (PM1 + PM2)
 
 ---
 
-## 🎯 Objective
+## Objective
+Crack the password of a protected PDF file using two different methods:
+1. John the Ripper (JTR) with the Johnny GUI
+2. NetworkWalks' own Hash Calculator and Password Cracker web tools
 
-Understand how password cracking works end to end and show why weak, common passwords are dangerous.
+This demonstrates how password hashes can be extracted from locked files and cracked using dictionary attacks, and reinforces why strong, unique passwords matter.
 
-## 🧰 Tools Used
+---
 
-| Module | Tools |
-|--------|-------|
-| Module 1 | John the Ripper 1.9.0-jumbo-1, Johnny GUI 2.2, PDF hash extractor |
-| Module 2 | Networkwalks Hash Calculator, Networkwalks Password Cracker (dictionary attack) |
+## PM1 — Password Cracking with JTR
 
-## 🧠 Background
+**Tools Used:**
+- John the Ripper (1.9.0 jumbo, Windows 64-bit)
+- Johnny GUI (2.2, Windows)
+- Online PDF Hash Extractor (onlinehashcrack.com)
 
-- **Hashing** is a one-way function: plain text goes in, a scrambled digest comes out.
-- **Encryption** is two-way: it can be decrypted with the right key.
-- A locked PDF stores its password as a hash (`$pdf$...`). If we extract that hash, we can test guesses against it offline.
+**Target File:** `My Locked PDF1.pdf` (267 KB)
 
-## 🔁 Methodology
+### Steps
 
-### Module 1: John the Ripper + Johnny
-1. Downloaded John the Ripper (jumbo) and Johnny GUI.
-2. Pointed Johnny to `john.exe` in Settings.
-3. Extracted the PDF hash (`$pdf$...`) and saved it as `hash1.txt`.
-4. Opened `hash1.txt` in Johnny and started a new attack.
-5. Johnny cracked the hash (100%, 1/1 cracked).
-6. Opened the PDF with the recovered password.
+**1. Downloaded target file and tools**
+![Downloads](screenshots/q1.png)
 
-### Module 2: Networkwalks Tools
-1. Uploaded the PDF to the **Hash Calculator** to extract the hash (Revision R4, Version V4, 128-bit key).
-2. Pasted the hash into the **Password Cracker**.
-3. Ran a dictionary attack with the built-in 100-word list.
-4. Match found after 91 attempts.
-5. Opened the PDF and captured the flag. 🚩
+**2. Configured Johnny with the John the Ripper executable**
+![Johnny Settings](screenshots/q2.png)
 
-## 📸 Screenshots
+**3. Extracted the PDF hash**
+![Hash Extracted](screenshots/q3.png)
 
-### Module 1
-| Johnny setup | Hash extraction |
-|---|---|
-| ![](module1-jtr-johnny/screenshots/01-johnny-settings-john-exe.png) | ![](module1-jtr-johnny/screenshots/02-hash-extracted.png) |
+**4. Loaded the hash into Johnny**
+![Hash Loaded](screenshots/q4.png)
 
-| Cracked in Johnny | Flag captured |
-|---|---|
-| ![](module1-jtr-johnny/screenshots/03-password-cracked.png) | ![](module1-jtr-johnny/screenshots/04-flag-captured.png) |
+**5. Ran the attack and cracked the password**
+![Password Cracked](screenshots/q5.png)
 
-### Module 2
-| Hash extracted | Attack in progress |
-|---|---|
-| ![](module2-networkwalks-tools/screenshots/01-pdf-hash-extracted.png) | ![](module2-networkwalks-tools/screenshots/02-cracker-in-progress.png) |
+**6. Verified by opening the PDF with the cracked password**
+![PDF Unlocked](screenshots/q6.png)
 
-| Password cracked | Flag captured |
-|---|---|
-| ![](module2-networkwalks-tools/screenshots/03-password-cracked.png) | ![](module2-networkwalks-tools/screenshots/04-flag-captured.png) |
+### Cracked Password
+`good-luck`
 
-## 📊 Results
+---
 
-| Item | Result |
-|------|--------|
-| Hash type | PDF (`$pdf$4*4*128*...`), R4/V4, 128-bit |
-| Attack type | Dictionary attack |
-| Attempts needed | 91 of 100 words |
-| Outcome | ✅ Password recovered, PDF unlocked, flag captured |
+## PM2 — Password Cracking with NetworkWalks Tools
 
-## 💡 Key Learnings
+**Tools Used:**
+- NetworkWalks Hash Calculator (networkwalks.com/hash-calculator)
+- NetworkWalks Password Cracker (networkwalks.com/password-cracker)
 
-1. **Weak passwords fall in seconds.** A common password was found within 91 guesses.
-2. **Length and uniqueness matter.** Long passphrases make dictionary and brute-force attacks impractical.
-3. **Encryption is only as strong as the password** protecting the key, even with 128-bit encryption.
-4. **Defensive takeaways:** use a password manager, enable MFA, never reuse passwords, avoid patterns like `word + number`.
-5. GUI tools like Johnny make it easy to learn, but the real work is done by John the Ripper underneath.
+**Target File:** `My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf` (66 KB)
 
-## 🔮 Next Steps
+### Steps
 
-- [ ] Try wordlist + rules attacks in John
-- [ ] Compare dictionary vs brute-force speed
-- [ ] Next lab: [add your Week 4 topic]
+**7. Confirmed target file**
+![Target File](screenshots/q7.png)
 
-## 🙏 Acknowledgements
+**8. Extracted the hash using Hash Calculator**
+![Hash Extracted](screenshots/q8.png)
 
-Thanks to [Networkwalks Academy](https://www.networkwalks.com) and my instructors for the lab material.
+**9. Pasted the hash into Password Cracker**
+![Hash Pasted](screenshots/q9.png)
 
-## 👤 Author
+**10. Ran the attack**
+![Attack Running](screenshots/q10.png)
 
-**[Your Name]**
-[LinkedIn](your-linkedin-url) | [GitHub](your-github-url)
+**11. Password cracked successfully**
+![Password Cracked](screenshots/q11.png)
+
+**12. Verified by opening the PDF with the cracked password**
+![PDF Unlocked](screenshots/q12.png)
+
+### Cracked Password
+`good-luck`
+
+---
+
+## Conclusion
+Both labs showed how password-protected PDFs can be cracked quickly once their hash is extracted, especially when the password is a common word or short phrase. JTR/Johnny represents the offline, installed-tool approach used by security professionals, while the NetworkWalks tools demonstrate the same concept entirely in-browser. Together they reinforce why strong, long, and unique passwords — not simple dictionary words — are essential for real-world file and account protection.
