@@ -8,12 +8,16 @@
 **Week:** 03
 **Project:** Password Cracking (PM1 + PM2)
 
+> ⚠️ **Disclaimer:** This lab was performed on files provided by Networkwalks Academy in an authorized training environment, for educational purposes only.
+
 ---
 
 ## Objective
+
 Crack the password of a protected PDF file using two different methods:
-1. John the Ripper (JTR) with the Johnny GUI
-2. NetworkWalks' own Hash Calculator and Password Cracker web tools
+
+1. **John the Ripper (JTR)** with the Johnny GUI
+2. **NetworkWalks'** own Hash Calculator and Password Cracker web tools
 
 This demonstrates how password hashes can be extracted from locked files and cracked using dictionary attacks, and reinforces why strong, unique passwords matter.
 
@@ -56,8 +60,8 @@ This demonstrates how password hashes can be extracted from locked files and cra
 ## PM2 — Password Cracking with NetworkWalks Tools
 
 **Tools Used:**
-- NetworkWalks Hash Calculator (networkwalks.com/hash-calculator)
-- NetworkWalks Password Cracker (networkwalks.com/password-cracker)
+- NetworkWalks Hash Calculator ([networkwalks.com/hash-calculator](https://networkwalks.com/hash-calculator/))
+- NetworkWalks Password Cracker ([networkwalks.com/password-cracker](https://networkwalks.com/password-cracker/))
 
 **Target File:** `My Locked PDF1 (for NW Tools Lab WK3-PM2).pdf` (66 KB)
 
@@ -87,4 +91,19 @@ This demonstrates how password hashes can be extracted from locked files and cra
 ---
 
 ## Conclusion
+
 Both labs showed how password-protected PDFs can be cracked quickly once their hash is extracted, especially when the password is a common word or short phrase. JTR/Johnny represents the offline, installed-tool approach used by security professionals, while the NetworkWalks tools demonstrate the same concept entirely in-browser. Together they reinforce why strong, long, and unique passwords — not simple dictionary words — are essential for real-world file and account protection.
+
+---
+
+## Key Takeaways
+
+- Both tools extract a crackable hash (`$pdf$...`) from the locked PDF before any cracking happens.
+- A dictionary attack tries known/common words — if the password is one of them, it's found fast.
+- `good-luck` is a predictable, dictionary-based phrase, which is exactly why it cracked quickly.
+- Strong passwords should avoid real words/phrases, use length (12+ characters), and mix character types, or better — use a passphrase with random unrelated words plus a password manager.
+
+## Author
+
+**Sakina Aftab**
+Networkwalks Cybersecurity Internship — Batch B084
