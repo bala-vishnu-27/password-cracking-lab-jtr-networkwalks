@@ -2,8 +2,8 @@
 
 ## Password Cracking with JTR & NetworkWalks Tools
 
-**Name:** Sakina Aftab
-**Batch:** B084
+**Name:** Bala vishnu
+**Batch:** B084C
 **Program:** Networkwalks Cybersecurity Internship
 **Week:** 03
 **Project:** Password Cracking (PM1 + PM2)
